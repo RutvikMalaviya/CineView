@@ -1,0 +1,36 @@
+import { Router } from "express";
+import { adminRouter } from "./admin";
+import { auditoriumsRouter } from "./auditoriums";
+import { authRouter } from "./auth";
+import { bookingsRouter } from "./bookings";
+import { cinemasRouter } from "./cinemas";
+import { concessionsRouter } from "./concessions";
+import { healthRouter } from "./health";
+import { moviesRouter } from "./movies";
+import { offersRouter } from "./offers";
+import { paymentsRouter } from "./payments";
+import { reviewsRouter } from "./reviews";
+import { screenTypesRouter } from "./screen-types";
+import { seatReservationsRouter } from "./seat-reservations";
+import { showtimesRouter } from "./showtimes";
+import { ticketsRouter } from "./tickets";
+import { usersRouter } from "./users";
+
+export const apiRouter = Router();
+
+apiRouter.use("/health", healthRouter);
+apiRouter.use("/auth", authRouter);
+apiRouter.use("/users", usersRouter);
+apiRouter.use("/movies", moviesRouter);
+apiRouter.use("/cinemas", cinemasRouter);
+apiRouter.use("/auditoriums", auditoriumsRouter);
+apiRouter.use("/offers", offersRouter);
+apiRouter.use("/concessions", concessionsRouter);
+apiRouter.use("/showtimes", showtimesRouter);
+apiRouter.use("/seat-reservations", seatReservationsRouter);
+apiRouter.use("/bookings", bookingsRouter);
+apiRouter.use("/payments", paymentsRouter);
+apiRouter.use("/tickets", ticketsRouter);
+apiRouter.use("/reviews", reviewsRouter);
+apiRouter.use("/screen-types", screenTypesRouter);
+apiRouter.use("/admin", adminRouter);

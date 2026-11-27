@@ -1,0 +1,57 @@
+import type { Cinema } from "@/types/domain";
+
+export const CINEMAS_DATA: Cinema[] = [
+  {
+    id: "cin-premiere-dome",
+    name: "CineView Premiere Dome - Downtown Flagship",
+    tier: "Flagship Tier • Curved Dome 1.43:1",
+    city: "Los Angeles",
+    address: "800 W Olympic Blvd, Los Angeles, CA 90015",
+    distanceMiles: 0.5,
+    facilities: [
+      "IMAX with Laser 4K",
+      "Dolby Atmos 128-Ch",
+      "Heated Recliners",
+      "Full Cocktail Lounge & Dine-In",
+      "Valet & Free EV Charging",
+    ],
+    imageUrl: "/images/cinemas/premiere-dome.svg",
+    auditoriumIds: ["aud-imax-gt", "aud-dolby-prime"],
+    parkingInfo: "Complimentary 4-hour valet & Level-2 EV charging at West Atrium.",
+  },
+  {
+    id: "cin-sunset-suites",
+    name: "CineView Sunset Boulevard & Recliner Suites",
+    tier: "Luxury Reserve • Hollywood District",
+    city: "Los Angeles",
+    address: "6801 Hollywood Blvd, Hollywood, CA 90028",
+    distanceMiles: 3.2,
+    facilities: [
+      "4K RGB Laser",
+      "Gourmet Kitchen",
+      "Private Suites",
+      "Sommelier Onsite",
+      "Valet Parking",
+    ],
+    imageUrl: "/images/cinemas/sunset-suites.svg",
+    auditoriumIds: ["aud-vip-suite"],
+    parkingInfo: "Dedicated subterranean valet via Highland Ave entrance.",
+  },
+  {
+    id: "cin-century-pavilion",
+    name: "CineView Century City Tech Pavilion",
+    tier: "Experimental Pavilion • ScreenX 270°",
+    city: "Los Angeles",
+    address: "10250 Santa Monica Blvd, Century City, CA 90067",
+    distanceMiles: 5.8,
+    facilities: [
+      "Dual 4K Barco Laser",
+      "ScreenX 270° Surround",
+      "Spatial Acoustic Pods",
+      "Free 4-Hour Underground Garage",
+    ],
+    imageUrl: "/images/cinemas/century-pavilion.svg",
+    auditoriumIds: ["aud-pavilion-alpha"],
+    parkingInfo: "Free 4-hour validated underground parking in Structure B.",
+  },
+];

@@ -1,0 +1,46 @@
+{
+  "name": "cineview",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_OPTIONS='--experimental-require-module --no-warnings' next dev",
+    "build": "NODE_OPTIONS='--experimental-require-module --no-warnings' next build --webpack",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "NODE_OPTIONS=--experimental-require-module vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^7.0.9",
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "lucide-react": "^1.81.0",
+    "motion": "^14.14.0",
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-hook-form": "^7.92.0",
+    "three": "^0.187.0",
+    "zod": "^4.6.7",
+    "zustand": "^5.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@tailwindcss/postcss": "^4.3.5",
+    "@testing-library/jest-dom": "^8.0.0",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^26.6.11",
+    "@types/react": "^19.3.3",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.187.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.6",
+    "jsdom": "^27.0.1",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^6.0.3",
+    "vitest": "^5.1.2"
+  }
+}

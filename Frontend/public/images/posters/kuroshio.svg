@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.45"/>
+      <stop offset="55%" stop-color="#4cd7f6" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#0d0e12" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0e12" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0d0e12" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="900" fill="#0d0e12"/>
+  <rect width="600" height="900" fill="url(#g1)"/>
+  <circle cx="300" cy="324" r="150" fill="none" stroke="#a78bfa" stroke-width="2" stroke-opacity="0.6"/>
+  <circle cx="300" cy="324" r="100" fill="none" stroke="#4cd7f6" stroke-width="1.5" stroke-opacity="0.5"/>
+  <path d="M 0 648 Q 300 522 600 648" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect width="600" height="900" fill="url(#fade)"/>
+  <text x="300" y="720" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-weight="800" font-size="36" letter-spacing="3">KUROSHIO</text>
+  <text x="300" y="774" text-anchor="middle" fill="#a78bfa" font-family="sans-serif" font-weight="600" font-size="15" letter-spacing="6">VECTOR SHIFT</text>
+</svg>

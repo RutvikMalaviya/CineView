@@ -1,0 +1,13 @@
+{
+  "responses": {
+    "success": "Operation completed successfully.",
+    "server_error": "Something went wrong. Please try again later.",
+    "validation_error": "Validation failed for the requested payload.",
+    "not_found": "Requested resource was not found.",
+    "unauthorized": "Authentication is required to access this resource.",
+    "forbidden": "You do not have permission to perform this action.",
+    "rate_limited": "Too many requests. Please try again shortly.",
+    "csrf_invalid": "Invalid or missing CSRF token.",
+    "healthy": "CineView API is healthy."
+  }
+}

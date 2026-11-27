@@ -1,0 +1,43 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: cineview-postgres
+    environment:
+      POSTGRES_DB: cineview_dev
+      POSTGRES_USER: cineview
+      POSTGRES_PASSWORD: change_me_in_local_env
+    ports:
+      - "5433:5432"
+    volumes:
+      - cineview_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cineview -d cineview_dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: cineview-redis
+    command: redis-server --appendonly yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - cineview_redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: cineview-mailpit
+    profiles: ["mail"]
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
+volumes:
+  cineview_pg_data:
+  cineview_redis_data:
